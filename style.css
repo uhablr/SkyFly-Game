@@ -5,12 +5,23 @@
     font-family: Arial;
 }
 
+body {
+    overflow: hidden;
+}
+
 .scene {
     width: 100vw;
     height: 100vh;
     background: url("assets/montagne.jpg") center/cover no-repeat;
-    overflow: hidden;
     position: relative;
+}
+
+.joueur {
+    width: 80px;
+    position: absolute;
+    top: 45vh;
+    left: 20vw;
+    display: none;
 }
 
 .message {
