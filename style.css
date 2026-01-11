@@ -35,3 +35,18 @@ body {
     font-size: 2rem;
     text-align: center;
 }
+
+.score {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    color: #bf677d;
+    display: none;
+}
+
+.obstacle {
+    position: absolute;
+    width: 80px;
+    background: #652a48;
+}
