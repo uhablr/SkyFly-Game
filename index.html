@@ -3,13 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/avion.png">
     <link rel="stylesheet" href="style.css">
     <title>SkyFly Game</title>
 </head>
 
 <body>
 
+    <!-- Main game scene -->
     <div class="scene">
+        <!-- Player (airplane) -->
         <img src="assets/avion.png" class="joueur" id="avion">
     </div>
 
@@ -18,8 +22,13 @@
         <small>Up arrow ↑ to go up</small>
     </div>
 
+    <!-- Score and stars counter -->
     <div class="score">
-        Score : <span id="score">0</span>
+        <div id="scoreText">Score : <span id="score">0</span></div>
+        <div id="etoilesContainer">
+            <img src="assets/etoile.png" id="scoreEtoile"> :
+            <span id="nombreEtoiles">0</span>
+        </div>
     </div>
 
 

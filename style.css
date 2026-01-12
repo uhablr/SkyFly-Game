@@ -7,21 +7,34 @@
 
 body {
     overflow: hidden;
+    touch-action: manipulation;
 }
 
+/* Main game scene */
 .scene {
     width: 100vw;
     height: 100vh;
     background: url("assets/montagne.jpg") center/cover no-repeat;
+    overflow: hidden;
     position: relative;
 }
 
+/* Player (airplane) */
 .joueur {
     width: 80px;
     position: absolute;
     top: 45vh;
     left: 20vw;
     display: none;
+}
+
+/* Obstacles (top and bottom pipes) */
+.obstacle {
+    position: absolute;
+    width: 120px;
+    background: #91476d;
+    border-left: 3px solid #ffffff;
+    border-right: 3px solid #ffffff;
 }
 
 .message {
@@ -34,19 +47,47 @@ body {
     border-radius: 10px;
     font-size: 2rem;
     text-align: center;
+    z-index: 100;
 }
 
+/* Score display */
 .score {
     position: fixed;
     top: 10px;
     left: 10px;
+    color: rgb(191 103 125);
     font-size: 2rem;
-    color: #bf677d;
+    -webkit-text-stroke: 1px rgb(191 103 125);
     display: none;
+    z-index: 100;
 }
 
-.obstacle {
+/* Collectible star */
+.etoile {
     position: absolute;
-    width: 80px;
-    background: #652a48;
+    width: 20px;
+    height: 20px;
+    background: url("assets/etoile.png") center/cover no-repeat;
+    z-index: 50;
+}
+
+/* Star icon in score */
+#scoreEtoile {
+    width: 28px;
+    vertical-align: middle;
+}
+
+/* Stars counter text */
+#nombreEtoiles {
+    color: rgb(191 103 125);
+    font-size: 2rem;
+    -webkit-text-stroke: 1px rgb(191 103 125);
+}
+
+/* --- Responsive  --- */
+@media (max-width: 600px) {
+    .joueur { width: 60px; }
+    .obstacle { width: 80px; }
+    .message { font-size: 1.2rem; padding: 15px; width: 90%; }
+    .score { font-size: 1.5rem; }
 }
